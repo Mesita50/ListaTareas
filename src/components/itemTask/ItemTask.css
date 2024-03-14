@@ -1,0 +1,26 @@
+.task-item{
+    list-style: none;
+    display: flex;
+}
+#taskTitle{
+    font-size: 2rem;
+}
+#descriptionTask{
+font-size: 1.6rem;
+margin: 0.4rem;
+}
+#check{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 0.7rem;
+    margin-left: 3rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    border: 3px solid #3f009cbd;
+    background-color: #25005e;
+    appearance: none;
+}

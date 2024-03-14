@@ -1,0 +1,18 @@
+.filter{
+    width: max-content;
+    margin: 1rem 0 1rem 6rem;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem ;
+
+}
+#taskFilter{
+    color: #ffffff;
+    margin: 0.7rem 0 1rem 0.4rem;
+    text-align: center;
+    width: 10rem;
+    height: 2rem;
+    background-color: #383838;
+    border: 3px solid #6b6b6b;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
+}

@@ -1,26 +1,49 @@
-.task-item{
-    list-style: none;
+.item-task {
+    width: 96%;
+    height: max-content;
+    margin: 1rem;  
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #fff;
+    padding: 0.5rem;
+    background-color: #460DB8;
 }
-#taskTitle{
+  
+.item-task > .circle-state {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #ff0000;
+}
+  
+.item-task > h2 {
     font-size: 2rem;
+    width: 30%;
+    color: #ffff00;
 }
-#descriptionTask{
-font-size: 1.6rem;
-margin: 0.4rem;
+  
+.item-task > p {
+    color: #000;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 30%;
 }
-#check{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 0.7rem;
-    margin-left: 3rem;
+  
+.item-task > input[type=checkbox] {
     width: 2rem;
     height: 2rem;
-    cursor: pointer;
+    background: transparent;
+  }
+  
+.checked {
+    text-decoration: line-through;  
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    text-decoration-thickness: 3px;
+    text-decoration-color: #048a04;
 }
-input[type="checkbox"] {
-    border: 3px solid #3f009cbd;
-    background-color: #25005e;
-    appearance: none;
+  
+.item-task > .circle-green {
+    background-color: #008000;
 }

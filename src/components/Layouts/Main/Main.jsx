@@ -1,9 +1,7 @@
 import React from 'react'
-import './main.css'
-export const Main = ({children}) => {
-  return (
-    <div className='main'>
-        {children}
-    </div>
-  )
-}
+import './Main.css'
+
+export const Main = ({children}) => 
+<main className='main-container'>
+  {children}
+</main>

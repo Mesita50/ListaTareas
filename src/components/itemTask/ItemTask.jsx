@@ -1,23 +1,36 @@
-import React from 'react';
+import React, { useState,useContext } from 'react'
+import { tasksContext } from '../Context/Context'
+
 import './ItemTask.css'
 
-const ItemTask = ({ task }) => {
-    const circleStyle = {
-        margin: '0.7rem 1rem 0 4rem',
-        width: '2.2rem',
-        height: '2.2rem',
-        borderRadius: '50%',
-        marginRight: '10px',
-        backgroundColor: task.checkpoint ? '#07F142' : '#F14D07',
-      };
-  return (
-    <li className="task-item">
-        <div style={circleStyle}></div>
-      <h3 id='taskTitle'>{task.title}</h3>
-      <p id='descriptionTask'>{task.description}</p>
-      <input id='check'type="checkbox" checked={task.checkpoint}  />
-    </li>
-  );
-};
+export const ItemTask = ({titleTask,content}) => {
 
-export default ItemTask;
+  const context = useContext(tasksContext)
+  const [isChecked, setIsChecked] = useState(false)
+
+  const handleCheckboxChange = () => {
+    if (isChecked) {
+      context.setDoneTasks(context.doneTasks + 1)
+      // context.setPendingTasks(context.pendingTasks - 1)
+    } else {
+      context.setPendingTasks(context.pendingTasks + 1)
+      // context.setDoneTasks(context.doneTasks - 1)
+    }    
+    setIsChecked(!isChecked)
+  } 
+
+  return (
+    <li className={ isChecked ? 'item-task checked': 'item-task' }>
+      <div className={ isChecked ? 'circle-state circle-green': 'circle-state' }></div>
+      <h2>{titleTask}</h2>
+      <p>{content}</p>
+      <input 
+        type="checkbox"
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+      />
+    </li>
+  )
+}
+
+export default ItemTask

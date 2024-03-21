@@ -1,9 +1,10 @@
-.main-container {
-    margin: 10rem;
-    padding: 6rem;
-    width: 100vw;
+.container-tasks {
+    width: 90vw;
     height: max-content;
+    border-radius: 10px;
     background-color: #051FC1;
+    box-shadow: 0 0 10px #fff;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;  

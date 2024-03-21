@@ -1,17 +1,13 @@
-#root {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.TasksContainer{
-  border-radius: 5rem 5rem 5rem 5rem;
+#root {
+  width: 97vw;
+  height: 100vh;
   display: flex;
-  padding-bottom: 4rem;
-  margin: 1rem 0 1rem 4rem;
-  background-color: #25005e;
-  align-self: center;
-  width: 90%;
+  flex-direction: column;
+  align-items: center;  
+  text-align: center;  
 }

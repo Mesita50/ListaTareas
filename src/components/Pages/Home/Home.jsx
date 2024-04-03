@@ -1,38 +1,31 @@
-import React, { useContext } from 'react'
+import { useState } from 'react'
 import { Header } from '../../Layouts/Header/Header'
-import profile from '../../../images/profile.jpeg'
 import { Main } from '../../Layouts/Main/Main'
-import { InfoTasks } from '../../Layouts/InfoTasks/InfoTasks'
-import { NewTask } from '../../NewTask/NewTask'
-import { FilterTasks } from '../../FilterTasks/FilterTasks'
-import { ContainerTasks } from '../../Layouts/ContainerTasks/ContainerTasks.jsx'
+import { v4 as uuidv4} from 'uuid'
+import { ContainerTasks } from '../../Layouts/ContainerTasks/ContainerTasks'
 import { ItemTask } from '../../ItemTask/ItemTask'
-import { tasksContext } from '../../Context/Context'
+
+
+const tsk = [
+  { id: uuidv4(), title: 'Tarea de ejemplo 1', description: 'Descripción pendiente1',status: false},
+  { id: uuidv4(), title: 'Tarea de ejemplo 2', description: 'Descripción pendiente2',status: true},
+  { id: uuidv4(), title: 'Tarea de ejemplo 3', description: 'Descripción pendiente3',status: false},
+  { id: uuidv4(), title: 'Tarea de ejemplo 4', description: 'Descripción pendiente4',status: true}
+]
 
 export const Home = () => {
 
-  const otherContext = useContext(tasksContext)
-  
+  const [ tasks, setTasks] = useState(tsk)
  
   return (
     <>      
       <Header>
-        <div className="container-header-1">
-          <div className="container-title">
-            <h1 className='title-header'>Gestor de Tareas</h1>
-          </div>
-          <div className="container-img">
-            <img className='img-profile' src={profile} alt="Imagen de perfil" />        
-          </div>
-        </div>
-      <NewTask />
-      <InfoTasks />
+        <h1>Gestor de tareas</h1>
       </Header>      
       <Main>
-        <FilterTasks />
         <ContainerTasks>
           {
-            otherContext.tasks.map( (task,idx) => <ItemTask key={task+idx} titleTask={task.title} content={task.description} /> )
+            tasks.map(task => <ItemTask key={task.id} idTask={task.id} content={task.description} titleTask={task.title}></ItemTask>)
           }
         </ContainerTasks>
       </Main>        

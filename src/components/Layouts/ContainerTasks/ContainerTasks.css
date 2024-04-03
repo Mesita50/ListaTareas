@@ -1,8 +1,8 @@
 .container-tasks {
-    width: 90vw;
+    width: 75vw;
     height: max-content;
     border-radius: 10px;
-    background-color: #051FC1;
+    background-color: var(--task-color);
     box-shadow: 0 0 10px #fff;
     margin-top: 1rem;
     display: flex;

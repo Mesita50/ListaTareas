@@ -6,44 +6,43 @@
     justify-content: center;
     align-items: center;
     border-bottom: solid 1px #fff;
-    padding: 0.5rem;
-    background-color: #460DB8;
-}
+    padding: 0.5rem;  
+  }
   
-.item-task > .circle-state {
+  .item-task > .circle-state {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background-color: #ff0000;
-}
+    background-color: #ff0000bf;
+  }
   
-.item-task > h2 {
-    font-size: 2rem;
-    width: 30%;
-    color: #ffff00;
-}
-  
-.item-task > p {
-    color: #000;
-    font-style: normal;
+  .item-task > h2 {
     font-size: 1.5rem;
+    width: 30%;
+    color: #3f3f3c;
+  }
+  
+  .item-task > p {
+    color: #000;
+    font-style: italic;
+    font-size: 1.2rem;
     text-align: left;
     width: 30%;
-}
+  }
   
-.item-task > input[type=checkbox] {
-    width: 2rem;
-    height: 2rem;
+  .item-task > input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
     background: transparent;
   }
   
-.checked {
+  .checked {
     text-decoration: line-through;  
     font-weight: bold; /* Hace que el texto sea más grueso */
-    text-decoration-thickness: 3px;
-    text-decoration-color: #048a04;
-}
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: #008000;
+  }
   
-.item-task > .circle-green {
-    background-color: #008000;
-}
+  .item-task > .circle-green {
+    background-color: #0080009f;
+  }

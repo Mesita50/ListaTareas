@@ -1,8 +1,7 @@
-.main-container {
-    margin: 10rem;
-    padding: 6rem;
-    width: 100vw;
+.main-container {    
+    width: 83vw;
     height: max-content;
+    margin-top: 20rem;
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
